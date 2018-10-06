@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
+import { sampleAction } from './actions/sampleAction'
+
 class App extends Component {
+
+  sampleAction = () => {
+    this.props.sampleAction();
+   }
+
   render() {
     return (
       <div className="App">
@@ -17,12 +25,26 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            React + Redux
           </a>
+            <pre>
+              {
+                JSON.stringify(this.props)
+              }
+            </pre>
+            <button onClick={this.sampleAction}>Test redux action</button>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+ });
+
+ const mapDispatchToProps = dispatch => ({
+  sampleAction: () => dispatch(sampleAction())
+ });
+
+ export default connect(mapStateToProps, mapDispatchToProps)(App);
