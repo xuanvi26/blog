@@ -3,7 +3,19 @@ import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
 import { sampleAction } from './actions/sampleAction'
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
 
 class App extends Component {
 
@@ -12,6 +24,7 @@ class App extends Component {
    }
 
   render() {
+    const { classes } = this.props;
     return (
       <div className="App">
         <header className="App-header">
@@ -29,10 +42,10 @@ class App extends Component {
           </a>
             <pre>
               {
-                JSON.stringify(this.props)
+                JSON.stringify(this.props.sampleReducer)
               }
             </pre>
-            <button onClick={this.sampleAction}>Test redux action</button>
+            <Button color="primary" variant="outlined" className={classes.button} onClick={this.sampleAction}>Test redux action</Button>
         </header>
       </div>
     );
@@ -47,4 +60,4 @@ const mapStateToProps = state => ({
   sampleAction: () => dispatch(sampleAction())
  });
 
- export default connect(mapStateToProps, mapDispatchToProps)(App);
+ export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(App));
