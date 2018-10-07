@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
-
 import React from 'react'
+import { bindActionCreators } from 'redux'
+import { push } from 'connected-react-router'
 
 import { sampleAction } from '../actions/sampleAction';
 
@@ -24,6 +25,7 @@ const Home = (props) => {
       </div>
       <div>
         <Button color="primary" variant="outlined" className={classes.button} onClick={props.sampleAction}>Test redux action</Button>
+        <Button color="secondary" variant="contained" onClick={() => props.changePage()}>Go to about page via redux</Button>
       </div>
     </div>
   )
@@ -33,8 +35,9 @@ const mapStateToProps = state => ({
   ...state
  });
 
- const mapDispatchToProps = dispatch => ({
-  sampleAction: () => dispatch(sampleAction())
-});
+ const mapDispatchToProps = dispatch => bindActionCreators({
+  sampleAction: () => sampleAction(),
+  changePage: () => push('/about-us')
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Home));
