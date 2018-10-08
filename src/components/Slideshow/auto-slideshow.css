@@ -1,6 +1,6 @@
 .auto-slideshow {
   position: relative;
-  font-family: "Oswald";
+  font-family: 'Oswald', sans-serif;
   font-size: 7.5vw;
 }
 
@@ -13,9 +13,9 @@
 
 .auto-slideshow__subtitle {
   position: absolute;
-  top: 101%;
+  top: 96%;
   left: 10%;
-  font-family: 'Playfair Display, Times New Roman', Times, serif
+  font-family: 'Playfair Display', serif;
 }
 
 .auto-slideshow__rightIcon {
