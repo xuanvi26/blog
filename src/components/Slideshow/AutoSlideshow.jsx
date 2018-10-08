@@ -23,18 +23,20 @@ class AutoSlideshow extends React.Component {
     }, this.props.interval);
   }
 
-  componentWillReceiveProps() {
-    requestAnimationFrame(() => {
-      this.setState({
-        fade: "auto-slideshow__image--fade",
+  componentWillReceiveProps(nextProps) {
+    if (this.props.index !== nextProps.index) {
+      requestAnimationFrame(() => {
+        this.setState({
+          fade: "auto-slideshow__image--fade",
+        });
       });
-    })
+    }
   }
 
   render() {
     let title = "";
+    let subtitle = "";
     let rightIcon = "";
-    let subimage = "";
     if(this.props.title) {
       title = <div className="auto-slideshow__title">{this.props.title}</div>
     }
@@ -50,7 +52,7 @@ class AutoSlideshow extends React.Component {
     return (
       <div className="auto-slideshow">
         <img onAnimationEnd={() => { this.setState({ fade: "" });}} className={["auto-slideshow__img", this.state.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
-        {subimage}
+        {subtitle}
         {title}
         {rightIcon}
       </div>
