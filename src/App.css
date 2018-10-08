@@ -30,3 +30,22 @@
     transform: rotate(360deg);
   }
 }
+
+.banner {
+  position: relative;
+}
+
+.banner__img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.banner__title {
+  position: absolute;
+  top: 26%;
+  width: 100%;
+  font-size: 11vw;
+  text-align: center;
+  color: rgb(218, 216, 216);
+  font-family: 'Oswald';
+}
