@@ -1,26 +1,23 @@
 .auto-slideshow {
   position: relative;
-  font-family: 'Oswald', sans-serif;
-  font-size: 7.5vw;
+
 }
 
 .auto-slideshow__title {
   position: absolute;
-  top: 79%;
+  top: 81%;
   left: 10%;
-  font-weight: 600;
 }
 
 .auto-slideshow__subtitle {
   position: absolute;
-  top: 96%;
+  top: 98%;
   left: 10%;
-  font-family: 'Playfair Display', serif;
 }
 
 .auto-slideshow__rightIcon {
   position: absolute;
-  top: 80%;
+  top: 83%;
   left: 60%;
   width: 35%;
   height: 23%;
