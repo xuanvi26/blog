@@ -15,10 +15,10 @@ export default (props) => {
         <div>
             <Banner image="https://i.imgur.com/JlZlrLv.jpg" title='KENDRA NGUYEN'/>
             <Slideshow title={"ROOM"} subtitle={"MAKEOVER"} interval={7000} images={["https://i.imgur.com/gLQejaA.jpg", "https://i.imgur.com/UfYuYbO.jpg"]} rightIcon={"https://i.imgur.com/iqzjxvY.png"}/>
-            <Footer pages={pages} logo={logo} creator={creator} copyrightName={copyrightName} year={year}/>
             <div style={{display: 'flex'}}> 
                 {sliderItems}
             </div>
+            <Footer pages={pages} logo={logo} creator={creator} copyrightName={copyrightName} year={year}/>
         </div>
     )
 }
