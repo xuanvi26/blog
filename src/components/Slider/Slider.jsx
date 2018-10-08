@@ -41,7 +41,7 @@ function SingleLineGridList(props) {
       <div className='display-in-line'>
           <div className='subtitle'>{title}</div>
       </div>
-      <GridList className={classes.gridList} cols={1}>
+      <GridList className={classes.gridList} cellHeight={325} cols={1}>
         {props.tileData.map(tile => (
           <GridListTile className={classes.tileWrapper} key={tile.img}>
             <img src={tile.img} alt={tile.title} />
