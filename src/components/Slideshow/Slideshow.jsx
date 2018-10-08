@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 
 import { changeSlide } from '../../actions/changeSlide';
 import './slideshow.css';
-import '../../App.css'
 
 class AutoSlideshow extends React.Component {
   constructor(props) {

@@ -5,13 +5,13 @@
 .slideshow__title {
   position: absolute;
   top: 81%;
-  left: 10%;
+  left: 5%;
 }
 
 .slideshow__subtitle {
   position: absolute;
   top: 98%;
-  left: 10%;
+  left: 5%;
 }
 
 .slideshow__rightIcon {
@@ -23,8 +23,7 @@
 }
 
 .slideshow__img {
-  width: 90%;
-  margin: 2.5% 5% 0 5%;
+  width: 100%;
 }
 
 .slideshow__image--fade {
@@ -32,7 +31,7 @@
 }
 
 .slideshow__titles {
-  margin-bottom: 12vh;
+  margin-bottom: 11%;
 }
 
 @keyframes fadein {
