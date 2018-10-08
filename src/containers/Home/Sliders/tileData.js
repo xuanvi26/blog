@@ -1,6 +1,9 @@
 import liveEdge from './images/live-edge.png';
 import sconces from './images/sconces.png';
 import woodPlankTable from './images/wood-plank-table.jpg';
+import clearVase from './images/clear-vase.jpg';
+import wallClock from './images/wall-clock.jpeg';
+import geometricDecor from './images/geometric-decor.jpg';
 
 export default [
   {
@@ -13,7 +16,7 @@ export default [
       },
       {
         img: sconces,
-        title: 'DIY Sconces',
+        title: 'Wall sconce',
         author: 'author',
       },
       {
@@ -27,18 +30,18 @@ export default [
     title: 'DECOR',
     tileData: [
       {
-        img: liveEdge,
-        title: 'Second',
+        img: clearVase,
+        title: 'Clear vase',
         author: 'author',
       },
       {
-        img: sconces,
-        title: 'Second',
+        img: wallClock,
+        title: 'Wall clock',
         author: 'author',
       },
       {
-        img: woodPlankTable,
-        title: 'Second',
+        img: geometricDecor,
+        title: 'Geometric decor',
         author: 'author',
       },
     ]
