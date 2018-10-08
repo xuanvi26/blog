@@ -13,7 +13,7 @@ class App extends Component {
             <div className="banner__title">KENDRA NGUYEN</div>
           </div>
           <div>
-            <AutoSlideshow interval={9000} images={["https://i.imgur.com/EDXdUKO.jpg", "https://i.imgur.com/UfYuYbO.jpg"]} />
+            <AutoSlideshow title={"ROOM"} subtitle={"MAKEOVER"} interval={9000} images={["https://i.imgur.com/gLQejaA.jpg", "https://i.imgur.com/UfYuYbO.jpg"]} subimage={"https://i.imgur.com/iqzjxvY.png"}/>
           </div>
       </div>
     );

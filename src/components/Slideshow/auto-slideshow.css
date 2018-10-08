@@ -1,12 +1,34 @@
 .auto-slideshow {
   position: relative;
+  font-family: "Oswald";
+  font-size: 7.5vw;
+}
+
+.auto-slideshow__title {
+  position: absolute;
+  top: 79%;
+  left: 10%;
+  font-weight: 600;
+}
+
+.auto-slideshow__subtitle {
+  position: absolute;
+  top: 101%;
+  left: 10%;
+  font-family: 'Playfair Display, Times New Roman', Times, serif
+}
+
+.auto-slideshow__subimage {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  width: 35%;
+  height: 23%;
 }
 
 .auto-slideshow__img {
   width: 90%;
-  position: absolute;
-  left: 5%;
-  margin: 2.5% 0 0 0;
+  margin: 2.5% 5% 0 5%;
 }
 
 .auto-slideshow__image--fade {
