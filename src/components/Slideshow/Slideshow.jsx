@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import { changeSlide } from '../../actions/changeSlide';
 import './slideshow.css';
+import '../../App.css'
 
 class AutoSlideshow extends React.Component {
   constructor(props) {
@@ -38,11 +39,11 @@ class AutoSlideshow extends React.Component {
     let subtitle = "";
     let rightIcon = "";
     if(this.props.title) {
-      title = <div className="auto-slideshow__title">{this.props.title}</div>
+      title = <div className="title auto-slideshow__title">{this.props.title}</div>
     }
 
     if(this.props.subtitle) {
-      subtitle = <div className="auto-slideshow__subtitle">{this.props.subtitle}</div>
+      subtitle = <div className="subtitle auto-slideshow__subtitle">{this.props.subtitle}</div>
     }
 
     if(this.props.rightIcon) {
