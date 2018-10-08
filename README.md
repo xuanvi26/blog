@@ -1,6 +1,6 @@
 # Demo Blog Website
 
-* Uncompleted demo of an interior design blog (about, contact and shop page to be implemented).
+* Partial demo of an interior design blog (about, contact and shop page to be implemented).
 * Built with React, react-router, redux and Material-UI. 
 * Website deployed on Heroku: https://calm-wave-96337.herokuapp.com/.
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
