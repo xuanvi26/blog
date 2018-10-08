@@ -33,7 +33,7 @@ class AutoSlideshow extends React.Component {
 
   render() {
     let title = "";
-    let subtitle = "";
+    let rightIcon = "";
     let subimage = "";
     if(this.props.title) {
       title = <div className="auto-slideshow__title">{this.props.title}</div>
@@ -43,15 +43,16 @@ class AutoSlideshow extends React.Component {
       subtitle = <div className="auto-slideshow__subtitle">{this.props.subtitle}</div>
     }
 
-    if(this.props.subimage) {
-      subimage = <img alt="sub image" className="auto-slideshow__subimage" src={this.props.subimage} />
+    if(this.props.rightIcon) {
+      rightIcon = <img alt="right icon" className="auto-slideshow__rightIcon" src={this.props.rightIcon} />
     }
+    
     return (
       <div className="auto-slideshow">
         <img onAnimationEnd={() => { this.setState({ fade: "" });}} className={["auto-slideshow__img", this.state.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
         {subimage}
         {title}
-        {subtitle}
+        {rightIcon}
       </div>
     )
   }
