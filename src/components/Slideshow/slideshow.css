@@ -1,21 +1,20 @@
-.auto-slideshow {
+.slideshow {
   position: relative;
-
 }
 
-.auto-slideshow__title {
+.slideshow__title {
   position: absolute;
   top: 81%;
-  left: 10%;
+  left: 5%;
 }
 
-.auto-slideshow__subtitle {
+.slideshow__subtitle {
   position: absolute;
   top: 98%;
-  left: 10%;
+  left: 5%;
 }
 
-.auto-slideshow__rightIcon {
+.slideshow__rightIcon {
   position: absolute;
   top: 83%;
   left: 60%;
@@ -23,13 +22,16 @@
   height: 23%;
 }
 
-.auto-slideshow__img {
-  width: 90%;
-  margin: 2.5% 5% 0 5%;
+.slideshow__img {
+  width: 100%;
 }
 
-.auto-slideshow__image--fade {
+.slideshow__image--fade {
   animation: fadein 3.5s;
+}
+
+.slideshow__titles {
+  margin-bottom: 11%;
 }
 
 @keyframes fadein {

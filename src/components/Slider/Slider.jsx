@@ -13,7 +13,7 @@ const styles = theme => ({
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
     width: "40%",
-    margin: "10% 5%"
+    margin: "0 5%"
   },
   gridList: {
     flexWrap: 'nowrap',
@@ -21,7 +21,8 @@ const styles = theme => ({
     transform: 'translateZ(0)',
   },
   title: {
-    color: theme.palette.primary.light,
+    color: "white",
+    fontFamily: 'Playfair Display, sans-serif',
   },
   titleBar: {
     background:
@@ -50,10 +51,13 @@ const styles = theme => ({
  * ];
  */
 function SingleLineGridList(props) {
-  const { classes } = props;
+  const { classes, title } = props;
 
   return (
     <div className={classes.root}>
+      <div className='display-in-line'>
+          <div className='subtitle'>{title}</div>
+      </div>
       <GridList className={classes.gridList} cols={1}>
         {props.tileData.map(tile => (
           <GridListTile className={classes.tileWrapper} key={tile.img}>
