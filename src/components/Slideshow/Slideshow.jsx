@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
 import { changeSlide } from '../../actions/changeSlide';
-import './auto-slideshow.css';
+import './slideshow.css';
 
 class AutoSlideshow extends React.Component {
   constructor(props) {
