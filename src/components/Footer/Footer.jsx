@@ -15,6 +15,9 @@ const Footer = (props) => {
     return (
         <div className="footer">
             {linkItems}
+            <div>{props.logo}</div>
+            <div>MADE BY {props.creator}</div>
+            <div>&copy; {props.copyrightName} {props.year}</div>
         </div>
     )
 }

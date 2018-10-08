@@ -2,12 +2,12 @@ import React from 'react';
 
 import Contact from '../../pages/Contact/Contact'
 
-import { pages } from '../../constants/contants';
+import * as constants from '../../constants/constants';
 
 export default () => {
     return (
         <div>
-            <Contact pages={pages} />
+            <Contact pages={constants.PAGES} logo={constants.LOGO} creator={constants.CREATOR} copyrightName={constants.COPYRIGHTNAME} year={constants.YEAR} />
         </div>
     )
 }
