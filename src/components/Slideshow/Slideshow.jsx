@@ -28,7 +28,7 @@ class AutoSlideshow extends React.Component {
     if (this.props.index !== nextProps.index) {
       requestAnimationFrame(() => {
         this.setState({
-          fade: "auto-slideshow__image--fade",
+          fade: "slideshow__image--fade",
         });
       });
     }
@@ -39,22 +39,24 @@ class AutoSlideshow extends React.Component {
     let subtitle = "";
     let rightIcon = "";
     if(this.props.title) {
-      title = <div className="title auto-slideshow__title">{this.props.title}</div>
+      title = <div className="title slideshow__title">{this.props.title}</div>
     }
 
     if(this.props.subtitle) {
-      subtitle = <div className="subtitle auto-slideshow__subtitle">{this.props.subtitle}</div>
+      subtitle = <div className="subtitle slideshow__subtitle">{this.props.subtitle}</div>
     }
 
     if(this.props.rightIcon) {
-      rightIcon = <img alt="right icon" className="auto-slideshow__rightIcon" src={this.props.rightIcon} />
+      rightIcon = <img alt="right icon" className="slideshow__rightIcon" src={this.props.rightIcon} />
     }
     
     return (
-      <div className="auto-slideshow">
-        <img onAnimationEnd={() => { this.setState({ fade: "" });}} className={["auto-slideshow__img", this.state.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
-        {subtitle}
-        {title}
+      <div className="slideshow">
+        <img onAnimationEnd={() => { this.setState({ fade: "" });}} className={["slideshow__img", this.state.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
+        <div className='slideshow__titles'>
+          {subtitle}
+          {title}
+        </div>
         {rightIcon}
       </div>
     )

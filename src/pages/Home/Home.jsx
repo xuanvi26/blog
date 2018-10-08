@@ -15,18 +15,20 @@ export default (props) => {
         <div>
             <Banner image="https://i.imgur.com/JlZlrLv.jpg" title='KENDRA NGUYEN'/>
             <Slideshow title={"ROOM"} subtitle={"MAKEOVER"} interval={7000} images={["https://i.imgur.com/gLQejaA.jpg", "https://i.imgur.com/UfYuYbO.jpg"]} rightIcon={"https://i.imgur.com/iqzjxvY.png"}/>
-            <div className='title'>MAKE DIYS.REPEAT.</div>
-            <p className='text'>
-                We build DIY furniture and decor because we believe in saving money, 
-                being able to express creativity and taking advantage of customizable 
-                builds that suit anyone’s needs!
-            </p>
-            <div className='display-in-line'>
-                <div className='subtitle'>FURNITURE</div>
-                <div className='subtitle'>DECOR</div>
-            </div>
-            <div style={{display: 'flex'}}> 
-                {sliderItems}
+            <div className="home__body">
+                <div className='title'>MAKE DIYS.REPEAT.</div>
+                <p className='text'>
+                    We build DIY furniture and decor because we believe in saving money, 
+                    being able to express creativity and taking advantage of customizable 
+                    builds that suit anyone’s needs!
+                </p>
+                <div className='display-in-line'>
+                    <div className='subtitle'>FURNITURE</div>
+                    <div className='subtitle'>DECOR</div>
+                </div>
+                <div style={{display: 'flex'}}> 
+                    {sliderItems}
+                </div>
             </div>
             <Footer pages={pages} logo={logo} creator={creator} copyrightName={copyrightName} year={year}/>
         </div>
