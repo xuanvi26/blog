@@ -4,16 +4,18 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router'
 
+import { default as ScrollToTop } from './components/ScrollToTop/ScrollToTop'
+
 import './index.css';
 import App from './App';
 import store, { history } from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <div>
+    <ConnectedRouter history={history}>
+      <ScrollToTop>
           <App />
-        </div>
+      </ScrollToTop>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
