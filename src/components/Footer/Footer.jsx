@@ -18,7 +18,7 @@ const Footer = (props) => {
                 {linkItems}
             </div>
             <div className='display-column'>
-                <div className='footer__logo'>{props.logo}</div>
+                <div onClick={() => props.changePage('/')} className='footer__logo'>{props.logo}</div>
             </div>
             <div className='display-column'> 
                 <div className='footer__creator'>MADE BY {props.creator}</div>
