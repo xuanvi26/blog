@@ -10,11 +10,6 @@ export default [
     title: 'FURNITURE',
     tileData: [ 
       {
-        img: liveEdge,
-        title: 'Live edge table',
-        author: 'author',
-      },
-      {
         img: sconces,
         title: 'Wall sconce',
         author: 'author',
@@ -22,6 +17,11 @@ export default [
       {
         img: woodPlankTable,
         title: 'Wooden plank table',
+        author: 'author',
+      },
+      {
+        img: liveEdge,
+        title: 'Live edge table',
         author: 'author',
       },
     ]
