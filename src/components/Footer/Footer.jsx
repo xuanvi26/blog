@@ -9,15 +9,21 @@ import './footer.css';
 const Footer = (props) => {
     const {pages} = props;
     const linkItems = pages.map((page) => {
-        return <button onClick={() => props.changePage(page.redirectLink)}>{page.pageName}</button>;
+        return <div className='footer__links' onClick={() => props.changePage(page.redirectLink)}>{page.pageName}</div>;
     })
 
     return (
         <div className="footer">
-            {linkItems}
-            <div>{props.logo}</div>
-            <div>MADE BY {props.creator}</div>
-            <div>&copy; {props.copyrightName} {props.year}</div>
+            <div className='display-column'>
+                {linkItems}
+            </div>
+            <div className='display-column'>
+                <div className='footer__logo'>{props.logo}</div>
+            </div>
+            <div className='display-column'> 
+                <div className='footer__creator'>MADE BY {props.creator}</div>
+                <div className='footer__copyrightName'>&copy; {props.copyrightName} {props.year}</div>
+            </div>
         </div>
     )
 }
