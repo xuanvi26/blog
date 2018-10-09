@@ -4,3 +4,10 @@ export const changeSlide = (payload) => dispatch => {
    payload,
   })
  }
+
+ export const updateFade = (payload) => dispatch => {
+  dispatch({
+    type: 'UPDATE_FADE',
+    payload
+  })
+ }
