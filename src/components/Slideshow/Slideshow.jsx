@@ -2,17 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
-import { changeSlide } from '../../actions/changeSlide';
+import { changeSlide, updateFade } from '../../actions/slideShow';
 import './slideshow.css';
 
 class AutoSlideshow extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fade: ""
-    }
-  }
-
   componentWillMount() {
     setInterval(() => {
       if(this.props.index < this.props.images.length - 1) {
@@ -26,9 +19,7 @@ class AutoSlideshow extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.props.index !== nextProps.index) {
       requestAnimationFrame(() => {
-        this.setState({
-          fade: "slideshow__image--fade",
-        });
+        this.props.updateFade('slideshow__image--fade');
       });
     }
   }
@@ -51,7 +42,7 @@ class AutoSlideshow extends React.Component {
     
     return (
       <div className="slideshow">
-        <img onAnimationEnd={() => { this.setState({ fade: "" });}} className={["slideshow__img", this.state.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
+        <img onAnimationEnd={() => { this.props.updateFade('') }} className={["slideshow__img", this.props.fade].join(" ")} alt="auto slideshow" src={this.props.images[this.props.index]} />
         <div className='slideshow__titles'>
           {subtitle}
           {title}
@@ -63,11 +54,13 @@ class AutoSlideshow extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  index: state.slideshow.index
+  index: state.slideshow.index,
+  fade: state.slideshow.fade
  });
 
  const mapDispatchToProps = dispatch => bindActionCreators({
   changeSlide: (index) => changeSlide(index),
+  updateFade: (fadeClass) => updateFade(fadeClass),
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(AutoSlideshow);
